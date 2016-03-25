@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>UI Loading Component</title>
+    <meta name="description" content="UI Loading component to use with Tachyons">
+      <link rel="stylesheet" href="css/tachyons.css">
+  </head>
+  <body>
+
+    <!-- An attempt to put a loading indicator dead center of page using only tachyons.css-->
+    <!-- Ended up need to add two inline styles. A table with table-cell/v-mid inside
+          do not play nice with the other classes (fixed?). Not sure. -->
+
+
+    <div class="fixed w-100 tc" style="top: 50%; transform: translateY(-50%);">
+      <!-- Anything in this div should land dead center of page. -->
+      <!-- SVG from https://github.com/jxnblk/loading/ -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="red">
+        <path transform="translate(0 0)" d="M0 12 V20 H4 V12z">
+          <animateTransform attributeName="transform" type="translate" values="0 0; 28 0; 0 0; 0 0" dur="1.5s" begin="0" repeatCount="indefinite" keytimes="0;0.3;0.6;1" keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8" calcMode="spline" />
+        </path>
+        <path opacity="0.5" transform="translate(0 0)" d="M0 12 V20 H4 V12z">
+          <animateTransform attributeName="transform" type="translate" values="0 0; 28 0; 0 0; 0 0" dur="1.5s" begin="0.1s" repeatCount="indefinite" keytimes="0;0.3;0.6;1" keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8" calcMode="spline" />
+        </path>
+        <path opacity="0.25" transform="translate(0 0)" d="M0 12 V20 H4 V12z">
+          <animateTransform attributeName="transform" type="translate" values="0 0; 28 0; 0 0; 0 0" dur="1.5s" begin="0.2s" repeatCount="indefinite" keytimes="0;0.3;0.6;1" keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8" calcMode="spline" />
+        </path>
+      </svg>
+
+    </div>
+
+
+  </body>
+</html>
